@@ -1,19 +1,19 @@
 function showinput(){
-
+    document.getElementById('inputvalue').value="";
     document.getElementById('bloginput').style.display="block";
- 
     document.getElementById('addpost').style.display="none";
- 
-    blogcontent = document.getElementById('bloginput').innerHTML;   
- 
+    document.getElementById('postbtn').style.display="block";
  }
  
  function showadd(){
- 
-     document.getElementById('addpost').style.display="block";
- 
-     document.getElementById('postbtn').style.display="none";
- 
-     document.getElementById('bloginput').style.display="none";
+    var prevdata = document.getElementById('blogcontentid').innerHTML;
+    document.getElementById('saveprevdiv').innerHTML=prevdata;
+    document.getElementById('blogcontentid').innerHTML="";
+    document.getElementById('addpost').style.display="block";
+    document.getElementById('postbtn').style.display="none";
+    document.getElementById('bloginput').style.display="none";
+    document.getElementById('blogcontentid').innerHTML = 
+    prevdata + "</br>" + document.getElementById('inputvalue').value;
+    document.getElementById('blogcontentid').style.display="block";
  
  }
