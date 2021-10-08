@@ -8,12 +8,9 @@ function showinput(){
  function showadd(){
     var prevdata = document.getElementById('blogcontentid').innerHTML;
     document.getElementById('saveprevdiv').innerHTML=prevdata;
-    document.getElementById('blogcontentid').innerHTML="";
     document.getElementById('addpost').style.display="block";
     document.getElementById('postbtn').style.display="none";
     document.getElementById('bloginput').style.display="none";
-    document.getElementById('blogcontentid').innerHTML = 
-    prevdata + "</br>" + document.getElementById('inputvalue').value;
-    document.getElementById('blogcontentid').style.display="block";
- 
+    document.getElementById('blogcontentid').innerHTML=
+    document.getElementById('inputvalue').value  + "</br>" + "<hr/>" + prevdata;
  }
